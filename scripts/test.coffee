@@ -1,3 +1,8 @@
+cronJob = require('cron').CronJob
+
 module.exports = (robot) ->
-  robot.hear /いでよ、ふなっしー！$/i, (msg) ->
-      msg.send "なんのようだなっしー！！！！"
+  cron = new cronJob('*/1 * * * *', () =>
+    envelope = room: "#free-room"
+    robot.send envelope, "ラブサーモン！"
+  )
+  cron.start()
