@@ -1,4 +1,6 @@
 #!/bin/sh
+export HUBOT_GOOGLE_CALENDAR_EMAIL=749509221286-jtoh1d9m9l59e246k6vel7ps3vriahir@developer.gserviceaccount.com
+export HUBOT_GOOGLE_CALENDAR_KEYFILE=./GoogleCalendarApiKey.pem
 
 set -e
 
