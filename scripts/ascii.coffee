@@ -19,4 +19,5 @@ module.exports = (robot) ->
       .http("http://asciime.heroku.com/generate_ascii")
       .query(s: msg.match[2].split(' ').join('  '))
       .get() (err, res, body) ->
+        console.log(err)
         msg.send body
