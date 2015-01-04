@@ -7,3 +7,6 @@ module.exports = (robot) ->
 
   robot.hear /えび/i, (msg) ->
     msg.send "🍤"
+
+  robot.hear /だいず/i, (msg) ->
+    msg.send "そらまめ"
