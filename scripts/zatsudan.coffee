@@ -40,7 +40,6 @@ module.exports = (robot) ->
       json:
         utt: message
         nickname: user_name if user_name
-        t: 30
         context: context if context
       , (err, response, body) ->
         ## ContextIDの保存
