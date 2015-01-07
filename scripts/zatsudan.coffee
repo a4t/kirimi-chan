@@ -37,5 +37,8 @@ module.exports = (robot) ->
         ## ContextIDの保存
         robot.brain.set KEY_DOCOMO_CONTEXT, body.context
 
-        msg.send body.utt
+        gobi = ["しゃけー", "しゃけしゃけ", "しゃけけけけー", "…"]
+        gobi_num = Math.floor Math.random() * 4
+
+        msg.send body.utt + gobi[gobi_num]
 
