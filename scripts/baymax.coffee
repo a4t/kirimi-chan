@@ -3,7 +3,10 @@ module.exports = (robot) ->
     msg.send "ぬーぬーぬー"
 
   robot.hear /べいまっくす/i, (msg) ->
-      msg.send "ばらららららららら"
+    msg.send "ばらららららららら"
 
   robot.hear /ねぎまっくす/i, (msg) ->
-        msg.send "ねぎー　　　　　　　　　まっ"
+    msg.send "ねぎー　　　　　　　　　まっ"
+
+  robot.hear /:baymax:$/i, (msg) ->
+    msg.send "私の名はベイマックス。あなたの心と身体を守ります"
