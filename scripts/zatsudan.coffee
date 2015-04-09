@@ -23,6 +23,20 @@ module.exports = (robot) ->
     KEY_DOCOMO_CONTEXT = 'docomo-talk-context-' + context_code
     context = robot.brain.get KEY_DOCOMO_CONTEXT || ''
 
+    ## ContextIDを読み込む
+    KEY_DOCOMO_CONTEXT = 'docomo-talk-context'
+    context = robot.brain.get KEY_DOCOMO_CONTEXT || ''
+ 
+    ## 前回会話してからの経過時間調べる
+    KEY_DOCOMO_CONTEXT_TTL = 'docomo-talk-context-ttl'
+    TTL_MINUTES = 20
+    old_msec = robot.brain.get KEY_DOCOMO_CONTEXT_TTL
+    diff_minutes = getTimeDiffAsMinutes old_msec
+ 
+    ## 前回会話してから一定時間経っていたらコンテキストを破棄
+    if diff_minutes > TTL_MINUTES
+      context = ''
+
     url = 'https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=' + DOCOMO_API_KEY
     user_name = msg.message.user.name
 
