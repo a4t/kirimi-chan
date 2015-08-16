@@ -1,6 +1,6 @@
 module.exports = (robot) ->
   robot.hear /^忍どころか$/i, (msg) ->
-    randnum = Math.floor(Math.random() * 1000)
+    randnum = Math.floor(Math.random() * 100)
     if randnum < 70
       msg.send "パーリナイ！！！！"
     else if randnum < 90
