@@ -6,4 +6,4 @@ module.exports = (robot) ->
     else if randnum < 90
       msg.send "暴れてやるぜ！"
     else
-      msg.send "お布団入りたい\n\n＜⌒／ヽー､_＿\n／＜_/＿＿＿＿／\n￣￣￣￣￣￣￣"
+      msg.send "お布団入りたい\n\n　＜⌒／ヽー､_＿\n／＜_/＿＿＿＿／\n￣￣￣￣￣￣￣"
